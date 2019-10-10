@@ -1,0 +1,62 @@
+package com.example.leanbudget.ui.home;
+
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProviders;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.leanbudget.model.Category;
+import com.example.leanbudget.model.CategoryList;
+import com.example.leanbudget.model.Expense;
+import com.example.leanbudget.model.ExpenseAdapter;
+import com.example.leanbudget.R;
+
+import java.util.Date;
+
+public class HomeFragment extends Fragment {
+
+    private HomeViewModel homeViewModel;
+    private RecyclerView expenseRecycler;
+
+    public View onCreateView(@NonNull LayoutInflater inflater,
+                             ViewGroup container, Bundle savedInstanceState) {
+        homeViewModel =
+                ViewModelProviders.of(this).get(HomeViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_home, container, false);
+//        final TextView textView = root.findViewById(R.id.text_home);
+//        homeViewModel.getText().observe(this, new Observer<String>() {
+//            @Override
+//            public void onChanged(@Nullable String s) {
+//                textView.setText(s);
+//            }
+//        });
+
+        expenseRecycler = root.findViewById(R.id.recycler_expenses);
+        expenseRecycler.hasFixedSize();
+        expenseRecycler.setLayoutManager(new LinearLayoutManager(getContext()));
+
+        // Test instantiations
+        Category sportsCategory = new Category("Sports", R.drawable.ic_sport);
+        Category electronicsCategory = new Category("Electronics", R.drawable.ic_electronics);
+        CategoryList.getInstance().add(sportsCategory);
+        CategoryList.getInstance().add(electronicsCategory);
+
+        ExpenseAdapter.getInstance().addExpense(new Expense("Pool membership", 340, sportsCategory, new Date()));
+        ExpenseAdapter.getInstance().addExpense(new Expense("Batteries", 25, electronicsCategory, new Date()));
+        ExpenseAdapter.getInstance().addExpense(new Expense("Nintendo Switch", 2399, electronicsCategory, new Date()));
+        ExpenseAdapter.getInstance().addExpense(new Expense("Bike", 3225, sportsCategory, new Date()));
+        ExpenseAdapter.getInstance().addExpense(new Expense("Mouse", 299, electronicsCategory, new Date()));
+
+
+        //expenseRecyclerAdapter = new ExpenseAdapter(expenses);
+        expenseRecycler.setAdapter(ExpenseAdapter.getInstance());
+
+        return root;
+    }
+}

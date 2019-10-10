@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LeanBudget</string>
+    <string name="action_settings">Indstillinger</string>
+    <string name="add_button">Tilføj</string>
+    <string name="add_new_expense">Tilføj ny udgift</string>
+    <string name="cancel_button">Annuller</string>
+    <string name="category_title">Kategori</string>
+    <string name="cost_hint">\"249.99\"</string>
+    <string name="cost_title">Beløb</string>
+    <string name="description_hint">\"Dagligvarer\"</string>
+    <string name="description_title">Beskrivelse</string>
+    <string name="menu_gallery">Galleri</string>
+    <string name="menu_home">Hjem</string>
+    <string name="menu_send">Send</string>
+    <string name="menu_share">Del</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Redskaber</string>
+    <string name="nav_header_desc">Navigation</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="navigation_drawer_close">Luk navigationshylde</string>
+    <string name="navigation_drawer_open">Åbn navigationshylde</string>
+    <string name="add_new_category">Tilføj ny kategori</string>
+    <string name="name_hint">\"Elektronik\"</string>
+    <string name="name_title">Navn</string>
+</resources>
