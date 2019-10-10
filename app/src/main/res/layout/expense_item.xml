@@ -8,7 +8,7 @@
     android:paddingBottom="10dp"
     android:layout_marginTop="3dp"
     android:layout_marginBottom="3dp"
-    android:backgroundTint="@color/colorPrimary">
+    android:backgroundTint="@color/colorMocha">
 
     <ImageView
         android:id="@+id/expense_container_category_image"

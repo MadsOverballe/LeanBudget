@@ -44,14 +44,26 @@ public class HomeFragment extends Fragment {
         // Test instantiations
         Category sportsCategory = new Category("Sports", R.drawable.ic_sport);
         Category electronicsCategory = new Category("Electronics", R.drawable.ic_electronics);
+        Category foodCategory = new Category("Food", R.drawable.ic_cart);
         CategoryList.getInstance().add(sportsCategory);
         CategoryList.getInstance().add(electronicsCategory);
+        CategoryList.getInstance().add(foodCategory);
 
         ExpenseAdapter.getInstance().addExpense(new Expense("Pool membership", 340, sportsCategory, new Date()));
         ExpenseAdapter.getInstance().addExpense(new Expense("Batteries", 25, electronicsCategory, new Date()));
         ExpenseAdapter.getInstance().addExpense(new Expense("Nintendo Switch", 2399, electronicsCategory, new Date()));
         ExpenseAdapter.getInstance().addExpense(new Expense("Bike", 3225, sportsCategory, new Date()));
         ExpenseAdapter.getInstance().addExpense(new Expense("Mouse", 299, electronicsCategory, new Date()));
+        ExpenseAdapter.getInstance().addExpense(new Expense("Burger", 50, foodCategory, new Date()));
+        ExpenseAdapter.getInstance().addExpense(new Expense("Socks", 99, sportsCategory, new Date()));
+        ExpenseAdapter.getInstance().addExpense(new Expense("Adapter", 124.99, electronicsCategory, new Date()));
+        ExpenseAdapter.getInstance().addExpense(new Expense("Pizza", 75, foodCategory, new Date()));
+        ExpenseAdapter.getInstance().addExpense(new Expense("Football", 299, sportsCategory, new Date()));
+        ExpenseAdapter.getInstance().addExpense(new Expense("Shoes", 699, sportsCategory, new Date()));
+        ExpenseAdapter.getInstance().addExpense(new Expense("Pizza", 75, foodCategory, new Date()));
+        ExpenseAdapter.getInstance().addExpense(new Expense("Groceries", 212, foodCategory, new Date()));
+        ExpenseAdapter.getInstance().addExpense(new Expense("HDMI cable", 49, electronicsCategory, new Date()));
+
 
 
         //expenseRecyclerAdapter = new ExpenseAdapter(expenses);
