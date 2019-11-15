@@ -96,14 +96,6 @@ public class MainActivity extends AppCompatActivity {
                 || super.onSupportNavigateUp();
     }
 
-    @Override
-    public void onUserInteraction() {
-        super.onUserInteraction();
-        if (isOpen) {
-            fabClose();
-        }
-    }
-
     public void fabClicked(View view)
     {
         if (isOpen) {

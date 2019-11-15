@@ -4,16 +4,18 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
+import com.example.leanbudget.model.ExpenseAdapter;
+
 public class HomeViewModel extends ViewModel {
 
-    private MutableLiveData<String> mText;
+    private MutableLiveData<ExpenseAdapter> expenses;
 
     public HomeViewModel() {
-        mText = new MutableLiveData<>();
-        mText.setValue("This is home fragment");
+        expenses = new MutableLiveData<>();
+        expenses.setValue(ExpenseAdapter.getInstance());
     }
 
-    public LiveData<String> getText() {
-        return mText;
+    public LiveData<ExpenseAdapter> getExpenses() {
+        return expenses;
     }
 }
