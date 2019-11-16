@@ -10,8 +10,8 @@
     <string name="cost_title">Beløb</string>
     <string name="description_hint">\"Dagligvarer\"</string>
     <string name="description_title">Beskrivelse</string>
-    <string name="menu_gallery">Galleri</string>
-    <string name="menu_home">Hjem</string>
+    <string name="menu_categories">Galleri</string>
+    <string name="menu_overview">Hjem</string>
     <string name="menu_send">Send</string>
     <string name="menu_share">Del</string>
     <string name="menu_slideshow">Slideshow</string>

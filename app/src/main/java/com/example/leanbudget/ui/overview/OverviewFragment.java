@@ -1,4 +1,4 @@
-package com.example.leanbudget.ui.home;
+package com.example.leanbudget.ui.overview;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -21,16 +21,16 @@ import com.example.leanbudget.R;
 
 import java.util.Date;
 
-public class HomeFragment extends Fragment {
+public class OverviewFragment extends Fragment {
 
-    private HomeViewModel homeViewModel;
+    private OverviewViewModel homeViewModel;
     private RecyclerView expenseRecycler;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         homeViewModel =
-                ViewModelProviders.of(this).get(HomeViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_home, container, false);
+                ViewModelProviders.of(this).get(OverviewViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_overview, container, false);
         expenseRecycler = root.findViewById(R.id.recycler_expenses);
         expenseRecycler.setLayoutManager(new LinearLayoutManager(getContext()));
         expenseRecycler.hasFixedSize();

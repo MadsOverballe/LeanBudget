@@ -3,19 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@+id/nav_overview">
 
     <fragment
-        android:id="@+id/nav_home"
-        android:name="com.example.leanbudget.ui.home.HomeFragment"
-        android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/nav_overview"
+        android:name="com.example.leanbudget.ui.overview.OverviewFragment"
+        android:label="@string/menu_overview"
+        tools:layout="@layout/fragment_overview" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.leanbudget.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:id="@+id/nav_categories"
+        android:name="com.example.leanbudget.ui.categories.CategoriesFragment"
+        android:label="@string/menu_categories"
+        tools:layout="@layout/fragment_categories" />
 
     <fragment
         android:id="@+id/nav_slideshow"
