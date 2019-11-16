@@ -10,7 +10,7 @@
     <string name="cost_title">Betrag</string>
     <string name="description_hint">\"Lebensmittel\"</string>
     <string name="description_title">Beschreibung</string>
-    <string name="menu_gallery">Galerie</string>
+    <string name="menu_category">Galerie</string>
     <string name="menu_home">Zuhause</string>
     <string name="menu_send">Senden</string>
     <string name="menu_share">Teilen</string>
