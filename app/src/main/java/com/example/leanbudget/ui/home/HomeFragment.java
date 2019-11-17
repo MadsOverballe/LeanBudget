@@ -1,9 +1,14 @@
 package com.example.leanbudget.ui.home;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -25,6 +30,7 @@ public class HomeFragment extends Fragment {
 
     private HomeViewModel homeViewModel;
     private RecyclerView expenseRecycler;
+    private TextView totalBudgetValue;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -40,6 +46,33 @@ public class HomeFragment extends Fragment {
                 expenseRecycler.setAdapter(ExpenseAdapter.getInstance());
             }
         });
+
+        SharedPreferences preferences = getActivity().getSharedPreferences("MyPref", 0);
+        final SharedPreferences.Editor preferencesEditor = preferences.edit();
+        totalBudgetValue = root.findViewById(R.id.total_budget_value);
+        totalBudgetValue.setText(preferences.getString("totalBudget", "0"));
+
+        totalBudgetValue.addTextChangedListener(new TextWatcher() {
+
+            @Override
+            public void afterTextChanged(Editable s) {}
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start,
+                                          int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start,
+                                      int before, int count) {
+                if(s.length() != 0)
+                {
+                    preferencesEditor.putString("totalBudget", s.toString());
+                    preferencesEditor.apply();
+                }
+            }
+        });
+
 
         // Test instantiations
         Category sportsCategory = new Category("Sports", R.drawable.ic_sport);
