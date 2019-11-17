@@ -9,7 +9,7 @@
         android:id="@+id/total_budget_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="55dp"
+        android:layout_marginTop="40dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/recycler_expenses"
         app:layout_constraintTop_toTopOf="parent">
@@ -17,15 +17,15 @@
         <TextView
             android:id="@+id/total_budget_text"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:layout_weight="5"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
             android:text="@string/total_budget_label"
             android:textSize="24sp" />
 
         <EditText
             android:id="@+id/total_budget_value"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:ems="10"
             android:inputType="numberDecimal" />
@@ -35,11 +35,9 @@
         android:id="@+id/recycler_expenses"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/total_budget_layout" />
+        app:layout_constraintTop_toBottomOf="@id/total_budget_layout"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
