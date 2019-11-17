@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "303142843684",
+    "firebase_url": "https://leanbudget-3c6ec.firebaseio.com",
+    "project_id": "leanbudget-3c6ec",
+    "storage_bucket": "leanbudget-3c6ec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:303142843684:android:76cf78d1f3496501b8efb1",
+        "android_client_info": {
+          "package_name": "com.example.leanbudget"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "303142843684-5rpi0e0o6dmq7vg00mmuqhs1rhh24clp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBffCZW3WzVt-8ALEBMvQmtjBk1b3Hn6gY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "303142843684-5rpi0e0o6dmq7vg00mmuqhs1rhh24clp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
