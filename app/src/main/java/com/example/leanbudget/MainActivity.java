@@ -39,8 +39,10 @@ public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
 
+    // Authentication
     private static final int RC_SIGN_IN = 123;
     private FirebaseUser user;
+    private TextView navHeaderUserEmail;
 
     // Floating action button
     private FloatingActionButton fab_main;
@@ -62,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        // Authentication
         user = FirebaseAuth.getInstance().getCurrentUser();
         if (user != null){
             Toast.makeText(this, "Signed into: " + user.getEmail(), Toast.LENGTH_LONG).show();
