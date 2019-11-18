@@ -3,11 +3,16 @@ package com.example.leanbudget;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.leanbudget.model.CurrencyExchangeApi;
+import com.example.leanbudget.model.CurrencyExchangeRate;
+import com.example.leanbudget.model.CurrencyExchangeResponse;
+import com.example.leanbudget.model.CurrencyExchangeServiceGenerator;
 import com.firebase.ui.auth.AuthUI;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 
@@ -35,6 +40,10 @@ import android.widget.Toast;
 import java.util.Arrays;
 import java.util.List;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
@@ -42,7 +51,6 @@ public class MainActivity extends AppCompatActivity {
     // Authentication
     private static final int RC_SIGN_IN = 123;
     private FirebaseUser user;
-    private TextView navHeaderUserEmail;
 
     // Floating action button
     private FloatingActionButton fab_main;
@@ -177,6 +185,26 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void signOutClicked(MenuItem item) {
-        signOut(null);
+        requestCurrencyExchangeRates();
+        //signOut(null);
     }
+
+    public void requestCurrencyExchangeRates() {
+        CurrencyExchangeApi currencyExchangeApi = CurrencyExchangeServiceGenerator.getCurrencyExchangeApi();
+        Call<CurrencyExchangeResponse> call = currencyExchangeApi.getCurrencyExchangeRates();
+        call.enqueue(new Callback<CurrencyExchangeResponse>() {
+            @Override
+            public void onResponse(Call<CurrencyExchangeResponse> call, Response<CurrencyExchangeResponse> response) {
+                if (response.code() == 200) {
+                    //pokemon.setValue(response.body().getPokemon()); //Updating LiveData
+                    CurrencyExchangeRate currencyExchangeRate = response.body().getCurrencyExchangeRate();
+                }
+            }
+            @Override
+            public void onFailure(Call<CurrencyExchangeResponse> call, Throwable t) {
+                Log.i("Retrofit", "Something went wrong :(");
+            }
+        });
+    }
+
 }
