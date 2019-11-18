@@ -1,15 +1,17 @@
 package com.example.leanbudget.model;
 
-import java.util.Dictionary;
-
 public class CurrencyExchangeResponse {
 
     private String base;
     private String date;
     private Rates rates;
 
-    public CurrencyExchangeRate getCurrencyExchangeRate() {
-        return new CurrencyExchangeRate(base, date, rates.DKK);
+    public CurrencyExchangeRates getCurrencyExchangeRate() {
+        CurrencyExchangeRates exchangeRates = CurrencyExchangeRates.getInstance();
+        exchangeRates.setBase(base);
+        exchangeRates.setDate(date);
+        exchangeRates.setDKK(rates.DKK);
+        return exchangeRates;
     }
 
     private class Rates {

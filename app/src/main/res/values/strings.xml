@@ -25,4 +25,7 @@
     <string name="date_title">Date</string>
     <string name="total_budget_label">Total budget:</string>
     <string name="action_sign_out">Sign out</string>
+    <string name="menu_currencies">Currencies</string>
+    <string name="currencies_base_currency">Base currency:</string>
+    <string name="currencies_dkk">DKK:</string>
 </resources>

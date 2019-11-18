@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.leanbudget.model.CurrencyExchangeApi;
-import com.example.leanbudget.model.CurrencyExchangeRate;
+import com.example.leanbudget.model.CurrencyExchangeRates;
 import com.example.leanbudget.model.CurrencyExchangeResponse;
 import com.example.leanbudget.model.CurrencyExchangeServiceGenerator;
 import com.firebase.ui.auth.AuthUI;
@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_category)
+                R.id.nav_home, R.id.nav_category, R.id.nav_currencies)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
@@ -185,10 +185,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void signOutClicked(MenuItem item) {
-        requestCurrencyExchangeRates();
-        //signOut(null);
+        signOut(null);
     }
 
+    public void loadButtonClicked(View view) {
+        requestCurrencyExchangeRates();
+        Intent intent = getIntent();
+        finish();
+        startActivity(intent);
+    }
+
+    // Currencies
     public void requestCurrencyExchangeRates() {
         CurrencyExchangeApi currencyExchangeApi = CurrencyExchangeServiceGenerator.getCurrencyExchangeApi();
         Call<CurrencyExchangeResponse> call = currencyExchangeApi.getCurrencyExchangeRates();
@@ -196,8 +203,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<CurrencyExchangeResponse> call, Response<CurrencyExchangeResponse> response) {
                 if (response.code() == 200) {
-                    //pokemon.setValue(response.body().getPokemon()); //Updating LiveData
-                    CurrencyExchangeRate currencyExchangeRate = response.body().getCurrencyExchangeRate();
+                    CurrencyExchangeRates currencyExchangeRate = response.body().getCurrencyExchangeRate();
                 }
             }
             @Override
