@@ -8,6 +8,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import android.view.MenuItem;
 import android.view.View;
 
 import androidx.annotation.NonNull;
@@ -61,11 +62,9 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        signIn(null);
         user = FirebaseAuth.getInstance().getCurrentUser();
         if (user != null){
-            String name = user.getDisplayName().replace("s","$").replace("S","$");
-            Toast.makeText(this, "Welcome " + name, Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Signed into: " + user.getEmail(), Toast.LENGTH_LONG).show();
         }
         else {
             signIn(null);
@@ -172,5 +171,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, CategoryActivity.class);
         startActivity(intent);
         fabClose();
+    }
+
+    public void signOutClicked(MenuItem item) {
+        signOut(null);
     }
 }
