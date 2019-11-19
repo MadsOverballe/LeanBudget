@@ -10,7 +10,7 @@
     <string name="cost_title">Betrag</string>
     <string name="description_hint">\"Lebensmittel\"</string>
     <string name="description_title">Beschreibung</string>
-    <string name="menu_category">Galerie</string>
+    <string name="menu_category">Kategorie</string>
     <string name="menu_home">Zuhause</string>
     <string name="menu_send">Senden</string>
     <string name="menu_share">Teilen</string>
@@ -18,10 +18,19 @@
     <string name="menu_tools">Werkzeuge</string>
     <string name="nav_header_desc">Navigation</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
-    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_title">LeanBudget</string>
     <string name="navigation_drawer_close">Navigation geschlossen</string>
     <string name="navigation_drawer_open">Navigation geoffnen</string>
     <string name="add_new_category">Neue Kategorie hinzufügen</string>
     <string name="name_hint">\"Elektronik\"</string>
     <string name="name_title">Name</string>
+    <string name="action_sign_out">Abmelden</string>
+    <string name="currencies_base_currency">Hauptwährung</string>
+    <string name="currencies_dkk">DKK:</string>
+    <string name="fab_text_category">Kategorie</string>
+    <string name="fab_text_expense">Aufwand</string>
+    <string name="date_title">Datum</string>
+    <string name="menu_currencies">Währungen</string>
+    <string name="total_budget_label">Gesamtbudget</string>
+    <string name="load_currency_exchange_rates">Wechselkurse laden</string>
 </resources>

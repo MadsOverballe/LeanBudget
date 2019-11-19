@@ -10,7 +10,7 @@
     <string name="cost_title">Beløb</string>
     <string name="description_hint">\"Dagligvarer\"</string>
     <string name="description_title">Beskrivelse</string>
-    <string name="menu_category">Galleri</string>
+    <string name="menu_category">Kategori</string>
     <string name="menu_home">Hjem</string>
     <string name="menu_send">Send</string>
     <string name="menu_share">Del</string>
@@ -18,10 +18,19 @@
     <string name="menu_tools">Redskaber</string>
     <string name="nav_header_desc">Navigation</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
-    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_title">LeanBudget</string>
     <string name="navigation_drawer_close">Luk navigationshylde</string>
     <string name="navigation_drawer_open">Åbn navigationshylde</string>
     <string name="add_new_category">Tilføj ny kategori</string>
     <string name="name_hint">\"Elektronik\"</string>
     <string name="name_title">Navn</string>
+    <string name="action_sign_out">Log ud</string>
+    <string name="currencies_base_currency">Grundvaluta:</string>
+    <string name="currencies_dkk">DKK:</string>
+    <string name="fab_text_category">Kategori</string>
+    <string name="fab_text_expense">Udgift</string>
+    <string name="date_title">Dato</string>
+    <string name="menu_currencies">Valutaer</string>
+    <string name="total_budget_label">Totalt budget:</string>
+    <string name="load_currency_exchange_rates">Indlæs valutakurser</string>
 </resources>

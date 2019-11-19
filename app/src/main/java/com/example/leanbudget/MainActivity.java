@@ -3,10 +3,14 @@ package com.example.leanbudget;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.leanbudget.model.Category;
+import com.example.leanbudget.model.CategoryList;
 import com.example.leanbudget.model.CurrencyExchangeApi;
 import com.example.leanbudget.model.CurrencyExchangeRates;
 import com.example.leanbudget.model.CurrencyExchangeResponse;
 import com.example.leanbudget.model.CurrencyExchangeServiceGenerator;
+import com.example.leanbudget.model.Expense;
+import com.example.leanbudget.model.ExpenseAdapter;
 import com.firebase.ui.auth.AuthUI;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -38,6 +42,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
 import retrofit2.Call;
@@ -71,6 +76,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        // Mock data
+        //mockCategoriesAndExpenses();
 
         // Authentication
         user = FirebaseAuth.getInstance().getCurrentUser();
@@ -211,6 +219,31 @@ public class MainActivity extends AppCompatActivity {
                 Log.i("Retrofit", "Something went wrong :(");
             }
         });
+    }
+
+    private void mockCategoriesAndExpenses() {
+        // Test instantiations
+        Category sportsCategory = new Category("Sports", R.drawable.ic_sport);
+        Category electronicsCategory = new Category("Electronics", R.drawable.ic_electronics);
+        Category foodCategory = new Category("Food", R.drawable.ic_cart);
+        CategoryList.getInstance().add(sportsCategory);
+        CategoryList.getInstance().add(electronicsCategory);
+        CategoryList.getInstance().add(foodCategory);
+
+        ExpenseAdapter.getInstance().addExpense(new Expense("Pool membership", 340, sportsCategory, new Date()));
+        ExpenseAdapter.getInstance().addExpense(new Expense("Batteries", 25, electronicsCategory, new Date()));
+        ExpenseAdapter.getInstance().addExpense(new Expense("Nintendo Switch", 2399, electronicsCategory, new Date()));
+        ExpenseAdapter.getInstance().addExpense(new Expense("Bike", 3225, sportsCategory, new Date()));
+        ExpenseAdapter.getInstance().addExpense(new Expense("Mouse", 299, electronicsCategory, new Date()));
+        ExpenseAdapter.getInstance().addExpense(new Expense("Burger", 50, foodCategory, new Date()));
+        ExpenseAdapter.getInstance().addExpense(new Expense("Socks", 99, sportsCategory, new Date()));
+        ExpenseAdapter.getInstance().addExpense(new Expense("Adapter", 124.99, electronicsCategory, new Date()));
+        ExpenseAdapter.getInstance().addExpense(new Expense("Pizza", 75, foodCategory, new Date()));
+        ExpenseAdapter.getInstance().addExpense(new Expense("Football", 299, sportsCategory, new Date()));
+        ExpenseAdapter.getInstance().addExpense(new Expense("Shoes", 699, sportsCategory, new Date()));
+        ExpenseAdapter.getInstance().addExpense(new Expense("Pizza", 75, foodCategory, new Date()));
+        ExpenseAdapter.getInstance().addExpense(new Expense("Groceries", 212, foodCategory, new Date()));
+        ExpenseAdapter.getInstance().addExpense(new Expense("HDMI cable", 49, electronicsCategory, new Date()));
     }
 
 }

@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="loadButtonClicked"
-        android:text="Load currency exchange rates" />
+        android:text="@string/load_currency_exchange_rates" />
 
     <TextView
         android:id="@+id/currencies_base_label"
