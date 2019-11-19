@@ -12,10 +12,6 @@
     <string name="description_title">Beskrivelse</string>
     <string name="menu_category">Kategori</string>
     <string name="menu_home">Hjem</string>
-    <string name="menu_send">Send</string>
-    <string name="menu_share">Del</string>
-    <string name="menu_slideshow">Slideshow</string>
-    <string name="menu_tools">Redskaber</string>
     <string name="nav_header_desc">Navigation</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_title">LeanBudget</string>

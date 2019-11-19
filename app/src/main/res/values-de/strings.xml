@@ -12,10 +12,6 @@
     <string name="description_title">Beschreibung</string>
     <string name="menu_category">Kategorie</string>
     <string name="menu_home">Zuhause</string>
-    <string name="menu_send">Senden</string>
-    <string name="menu_share">Teilen</string>
-    <string name="menu_slideshow">Diashow</string>
-    <string name="menu_tools">Werkzeuge</string>
     <string name="nav_header_desc">Navigation</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_title">LeanBudget</string>
