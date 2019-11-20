@@ -6,9 +6,9 @@
     <string name="add_new_expense">Neue Kostenaufwand hinzufügen</string>
     <string name="cancel_button">Stornieren</string>
     <string name="category_title">Kategorie</string>
-    <string name="cost_hint">\"249.99\"</string>
+    <string name="cost_hint">249.99</string>
     <string name="cost_title">Betrag</string>
-    <string name="description_hint">\"Lebensmittel\"</string>
+    <string name="description_hint">Lebensmittel</string>
     <string name="description_title">Beschreibung</string>
     <string name="menu_category">Kategorie</string>
     <string name="menu_home">Zuhause</string>
@@ -18,7 +18,7 @@
     <string name="navigation_drawer_close">Navigation geschlossen</string>
     <string name="navigation_drawer_open">Navigation geoffnen</string>
     <string name="add_new_category">Neue Kategorie hinzufügen</string>
-    <string name="name_hint">\"Elektronik\"</string>
+    <string name="name_hint">Elektronik</string>
     <string name="name_title">Name</string>
     <string name="action_sign_out">Abmelden</string>
     <string name="currencies_base_currency">Hauptwährung</string>
@@ -28,5 +28,5 @@
     <string name="date_title">Datum</string>
     <string name="menu_currencies">Währungen</string>
     <string name="total_budget_label">Gesamtbudget</string>
-    <string name="load_currency_exchange_rates">Wechselkurse laden</string>
+    <string name="load_currency_exchange_rates">Wechselkurse aufrufen</string>
 </resources>
