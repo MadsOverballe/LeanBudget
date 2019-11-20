@@ -29,4 +29,5 @@
     <string name="currencies_base_currency">Base currency:</string>
     <string name="currencies_dkk">DKK:</string>
     <string name="load_currency_exchange_rates">Load currency exchange rates</string>
+    <string name="currencies_usd">USD:</string>
 </resources>

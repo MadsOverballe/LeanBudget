@@ -25,6 +25,7 @@ public class CurrenciesFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_currencies, container, false);
         final TextView base = root.findViewById(R.id.currencies_base_value);
         final TextView dkk = root.findViewById(R.id.currencies_dkk_value);
+        final TextView usd = root.findViewById(R.id.currencies_usd_value);
         currenciesViewModel.getBase().observe(this, new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
@@ -35,6 +36,12 @@ public class CurrenciesFragment extends Fragment {
             @Override
             public void onChanged(@Nullable String s) {
                 dkk.setText(s);
+            }
+        });
+        currenciesViewModel.getUsd().observe(this, new Observer<String>() {
+            @Override
+            public void onChanged(@Nullable String s) {
+                usd.setText(s);
             }
         });
         return root;

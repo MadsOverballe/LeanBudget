@@ -5,6 +5,6 @@ import retrofit2.http.GET;
 
 public interface CurrencyExchangeApi {
 
-    @GET("latest?symbols=DKK")
+    @GET("latest")
     Call<CurrencyExchangeResponse> getCurrencyExchangeRates();
 }

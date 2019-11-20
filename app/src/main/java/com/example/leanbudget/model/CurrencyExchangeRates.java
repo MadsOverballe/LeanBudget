@@ -13,6 +13,7 @@ public class CurrencyExchangeRates {
     private String base = "NOT LOADED";
     private String date = "";
     private double DKK = 0;
+    private double USD = 0;
 
     private CurrencyExchangeRates() {
     }
@@ -46,5 +47,13 @@ public class CurrencyExchangeRates {
 
     public void setDKK(double DKK) {
         this.DKK = DKK;
+    }
+
+    public double getUSD() {
+        return USD;
+    }
+
+    public void setUSD(double USD) {
+        this.USD = USD;
     }
 }

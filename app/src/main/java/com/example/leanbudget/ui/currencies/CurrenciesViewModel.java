@@ -19,16 +19,19 @@ public class CurrenciesViewModel extends ViewModel {
 
     private MutableLiveData<String> base;
     private MutableLiveData<String> dkk;
+    private MutableLiveData<String> usd;
 
     public CurrenciesViewModel() {
         //requestCurrencyExchangeRates();
 
         base = new MutableLiveData<>();
         dkk = new MutableLiveData<>();
+        usd = new MutableLiveData<>();
 
         CurrencyExchangeRates currencyExchangeRates = CurrencyExchangeRates.getInstance();
         base.setValue(currencyExchangeRates.getBase());
         dkk.setValue(Double.toString(currencyExchangeRates.getDKK()));
+        usd.setValue(Double.toString(currencyExchangeRates.getUSD()));
     }
 
     public LiveData<String> getBase() {
@@ -37,5 +40,9 @@ public class CurrenciesViewModel extends ViewModel {
 
     public LiveData<String> getDkk() {
         return dkk;
+    }
+
+    public LiveData<String> getUsd() {
+        return usd;
     }
 }
